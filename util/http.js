@@ -1,13 +1,10 @@
 import axios from 'axios';
 
-const BACKEND_URL = 'https://react-native-course-d20fb-default-rtdb.europe-west1.firebasedatabase.app'
+const BACKEND_URL = 'https://expense-tracker-2-bd473-default-rtdb.firebaseio.com/'
 
 
 export function storeExpense(expenseData){
-    axios.post(
-        BACKEND_URL + '/expenses.json',
-        expenseData
-    );
+    axios.post(BACKEND_URL + '/expenses.json', expenseData);
 }
 
 export async function fetchExpenses() {
